@@ -1,0 +1,18 @@
+body {
+  max-width: 1280px;
+  background-color: #000;
+  margin: auto;
+  font-family: "inter";
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    padding: 1.7rem 4rem 2.2rem;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  body {
+    padding: 0 1rem;
+  }
+}

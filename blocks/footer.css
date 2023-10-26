@@ -1,0 +1,11 @@
+.footer {
+  margin-top: 4.19rem;
+}
+.footer__create {
+  color: #545454;
+  font-family: Inter;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
