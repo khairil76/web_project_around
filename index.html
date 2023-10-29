@@ -9,7 +9,11 @@
   <body>
     <!--block header-->
     <header class="header">
-      <img src="/images/Vector.png" alt="around amerika serikat" class="logo" />
+      <img
+        src="/images/Vector.svg"
+        alt="around amerika serikat"
+        class="header__logo"
+      />
     </header>
 
     <main class="container">
@@ -22,12 +26,12 @@
         />
         <div class="profile__info">
           <div class="profile__info-title-button">
-            <p class="profile__name">Jacques Cousteau</p>
-            <button class="profile__edit-button"></button>
+            <h1 class="profile__name">Jacques Cousteau</h1>
+            <button type="button" class="profile__edit-button"></button>
           </div>
           <p class="profile__role">Explore</p>
         </div>
-        <button class="profile__add">
+        <button type="button" class="profile__add">
           <img
             src="/images/Add-Button.png"
             alt="tombol add"
@@ -37,27 +41,27 @@
       </section>
 
       <!--form-edit-->
-      <section class="form-submit">
-        <form action="#" class="form-submit__container">
-          <h1 class="form-submit__input form-submit__title">Edit profile</h1>
+      <section class="popup">
+        <form action="#" name="popup-edit-profile" class="popup__container">
+          <h2 class="popup__title">Edit profile</h2>
           <input
             type="text"
-            class="form-submit__input form-submit__input-name"
+            class="popup__input popup__input-name"
             placeholder="Name"
             value="Jacques Cousteau"
           />
           <input
             type="text"
-            class="form-submit__input form-submit__input-role"
+            class="popup__input popup__input-role"
             placeholder="role"
             value="Explore"
           />
-          <button type="submit" class="form-submit__save">save</button>
-          <button type="button" class="form-submit__close">
+          <button type="submit" class="popup__save">save</button>
+          <button type="button" class="popup__close">
             <img
               src="./images/Close-Icon.png"
               alt="close-icon"
-              class="form-submit__close-image"
+              class="popup__close-image"
             />
           </button>
         </form>

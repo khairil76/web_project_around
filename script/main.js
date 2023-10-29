@@ -1,29 +1,30 @@
-let container = document.querySelector(".container");
-let formSubmit = container.querySelector(".form-submit__container");
-let editProfile = container.querySelector(".profile__edit-button");
-let closeButton = document.querySelector(".form-submit__close");
+let formSubmit = document.querySelector(".popup");
+let buttonEdit = document.querySelector(".profile__edit-button");
+let closeButton = formSubmit.querySelector(".popup__close");
+let inputName = formSubmit.querySelector(".popup__input-name");
+let inputRole = formSubmit.querySelector(".popup__input-role");
+let editProfileForm = document.querySelector(".popup__container");
+let outputContainerName = document.querySelector(".profile__name");
+let outputContainerRole = document.querySelector(".profile__role");
 
-function handleProfileFormSubmit(evt) {
-  evt.preventDefault();
-  let inputName = document.querySelector(".form-submit__input-name");
-  let inputRole = document.querySelector(".form-submit__input-role");
-
-  let nameValue = inputName.value;
-  let jobValue = inputRole.value;
-
-  let outputContainerName = document.querySelector(".profile__name");
-  let outputContainerRole = document.querySelector(".profile__role");
-
-  outputContainerName.textContent = `${nameValue}`;
-  outputContainerRole.textContent = `${jobValue}`;
+// membuka popup
+function openPopup() {
+  inputName.value = outputContainerName.textContent;
+  inputRole.value = outputContainerRole.textContent;
+  formSubmit.classList.add("popup__open");
 }
 
-formSubmit.addEventListener("submit", handleProfileFormSubmit);
+// menutup popup
+function closePopup() {
+  formSubmit.classList.remove("popup__open");
+}
 
-editProfile.addEventListener("click", function () {
-  formSubmit.style.display = "block";
-});
+buttonEdit.addEventListener("click", openPopup);
+closeButton.addEventListener("click", closePopup);
 
-closeButton.addEventListener("click", function () {
-  formSubmit.style.display = "none";
+editProfileForm.addEventListener("submit", function (evt) {
+  evt.preventDefault();
+  outputContainerName.textContent = inputName.value;
+  outputContainerRole.textContent = inputRole.value;
+  closePopup();
 });

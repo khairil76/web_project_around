@@ -1,7 +1,22 @@
-.form-submit__container {
+.popup {
   display: none;
+  z-index: 10;
+}
+
+.popup__open {
+  width: 100%;
+  height: 100vh;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(18, 15, 15, 0.6);
+  box-sizing: border-box;
+}
+
+.popup__container {
   width: 26.875rem;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -9,9 +24,8 @@
   background-color: #fff;
   padding: 2rem;
   box-sizing: border-box;
-  z-index: 10;
 }
-.form-submit__input {
+.popup__input {
   display: block;
   width: 100%;
   margin-bottom: 43px;
@@ -23,7 +37,7 @@
   padding: 8px;
   border-bottom: 0.2px solid #000;
 }
-.form-submit__title {
+.popup__title {
   max-width: 22.375rem;
   font-size: 1.5rem;
   font-style: normal;
@@ -32,7 +46,7 @@
   color: #000;
   border: none;
 }
-.form-submit__save {
+.popup__save {
   width: 100%;
   background-color: #000;
   text-align: center;
@@ -44,10 +58,10 @@
   line-height: normal;
   cursor: pointer;
 }
-.form-submit__save:hover {
+.popup__save:hover {
   opacity: 0.8;
 }
-.form-submit__close {
+.popup__close {
   position: absolute;
   border: none;
   background: none;
@@ -57,18 +71,36 @@
 }
 
 @media screen and (max-width: 320px) {
-  .form-submit__container {
+  .popup__container {
     width: 88%;
     padding: 1.2rem;
   }
-  .form-submit__close {
+  .popup__close {
     right: -0.2rem;
   }
-  .form-submit__close-image {
+  .popup__close-image {
     width: 1.5rem;
     height: 1.5rem;
   }
-  .form-submit__title {
+  .popup__title {
+    font-size: 1.125rem;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .popup__container {
+    width: 88%;
+    padding: 1.2rem;
+  }
+  .popup__close {
+    right: -0.2rem;
+  }
+  .popup__close-image {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .popup__title {
     font-size: 1.125rem;
     margin-top: 0;
   }
