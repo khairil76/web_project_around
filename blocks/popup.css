@@ -1,6 +1,9 @@
 .popup {
   display: none;
   z-index: 10;
+  background-color: rgba(18, 15, 15, 0.6);
+  transition: background-color 0.7s ease, opacity 0.1s ease;
+  opacity: 0.5;
 }
 
 .popup__open {
@@ -12,6 +15,7 @@
   left: 0;
   background-color: rgba(18, 15, 15, 0.6);
   box-sizing: border-box;
+  opacity: 1;
 }
 
 .popup__container {

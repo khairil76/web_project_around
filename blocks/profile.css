@@ -27,10 +27,8 @@
 }
 
 .profile__edit-button {
-  background: url(../images/Edit-Button.png) center;
-  width: 1.6rem;
-  border: 1px solid #fff;
   background-color: transparent;
+  border-style: none;
   height: 1.5rem;
   cursor: pointer;
 }

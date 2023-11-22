@@ -27,11 +27,21 @@
         <div class="profile__info">
           <div class="profile__info-title-button">
             <h1 class="profile__name">Jacques Cousteau</h1>
-            <button type="button" class="profile__edit-button"></button>
+            <button
+              type="button"
+              class="profile__edit-button"
+              data-popup="popupEditProfile"
+            >
+              <img src="./images/Edit-Button.png" alt="tombol edit" />
+            </button>
           </div>
           <p class="profile__role">Explore</p>
         </div>
-        <button type="button" class="profile__add">
+        <button
+          type="button"
+          class="profile__edit-button profile__add"
+          data-popup="popupAddImage"
+        >
           <img
             src="./images/Add-Button.png"
             alt="tombol add"
@@ -41,7 +51,7 @@
       </section>
 
       <!--form-edit-->
-      <section class="popup">
+      <section class="popup" id="popupEditProfile">
         <form action="#" name="popup-edit-profile" class="popup__container">
           <h2 class="popup__title">Edit profile</h2>
           <input
@@ -67,105 +77,71 @@
         </form>
       </section>
 
-      <!--cards-gallery-->
-      <section class="cards-gallery">
-        <div class="cards-gallery__item">
-          <img
-            src="./images/lembah-yosemite.png"
-            alt="lembah-yosemite"
-            class="cards-gallery__image"
+      <section class="popup" id="popupAddImage">
+        <form action="#" class="popup__container" name="popup-add-image">
+          <h2 class="popup__image-title">New Place</h2>
+          <input
+            type="text"
+            class="popup__input popup__input-place-name"
+            placeholder="Judul:"
+            required
           />
-          <div class="cards-gallery__group">
-            <p class="cards-gallery__group-title">Lembah Yosemite</p>
-            <button class="cards-gallery__like-button">
-              <img src="./images/Group.png" alt="like button" />
-            </button>
-          </div>
-        </div>
-
-        <div class="cards-gallery__item">
-          <img
-            src="./images/danau-louise.png"
-            alt="danau-louise"
-            class="cards-gallery__image"
+          <input
+            type="text"
+            class="popup__input popup__input-url"
+            placeholder="URL gambar"
+            required
           />
-          <div class="cards-gallery__group">
-            <p class="cards-gallery__group-title">Danau Louise</p>
-            <button class="cards-gallery__like-button">
-              <img src="./images/Group.png" alt="like button" />
-            </button>
-          </div>
-        </div>
-
-        <div class="cards-gallery__item">
-          <img
-            src="./images/pegunungan-gundul.png"
-            alt="pegunungan-gundul"
-            class="cards-gallery__image"
-          />
-          <div class="cards-gallery__group">
-            <p
-              class="cards-gallery__group-title cards-gallery__group-title-pegunungan"
-            >
-              Pegunungan Gundul
-            </p>
-            <button class="cards-gallery__like-button">
-              <img src="./images/Group.png" alt="like button" />
-            </button>
-          </div>
-        </div>
-
-        <div class="cards-gallery__item">
-          <img
-            src="./images/latemar.png"
-            alt="latemar"
-            class="cards-gallery__image"
-          />
-          <div class="cards-gallery__group">
-            <p class="cards-gallery__group-title">Latemar</p>
-            <button class="cards-gallery__like-button">
-              <img src="./images/Group.png" alt="like button" />
-            </button>
-          </div>
-        </div>
-
-        <div class="cards-gallery__item">
-          <img
-            src="./images/vanoise-nationa....png"
-            alt="vanoise-nationa"
-            class="cards-gallery__image"
-          />
-          <div class="cards-gallery__group">
-            <p class="cards-gallery__group-title">Vanoise National</p>
-            <button class="cards-gallery__like-button">
-              <img src="./images/Group.png" alt="like button" />
-            </button>
-          </div>
-        </div>
-
-        <div class="cards-gallery__item">
-          <img
-            src="./images/lago-di-braies.png"
-            alt="lago-di-braies"
-            class="cards-gallery__image"
-          />
-          <div class="cards-gallery__group">
-            <p class="cards-gallery__group-title">Lago di Braies</p>
-            <button class="cards-gallery__like-button">
-              <img
-                src="./images/Group.png"
-                alt="like button"
-                class="cards-gallery__like-button-image"
-              />
-            </button>
-          </div>
-        </div>
+          <button type="submit" class="popup__save popup__save-place">
+            save
+          </button>
+          <button type="button" class="popup__close">
+            <img
+              src="./images/Close-Icon.png"
+              alt="close-icon"
+              class="popup__close-image"
+            />
+          </button>
+        </form>
       </section>
+
+      <div class="card-container"></div>
+      <template class="cards-gallery" id="card-template">
+        <div class="cards-gallery__item">
+          <img src="" alt="" class="cards-gallery__image" />
+          <button class="cards-gallery__trash">
+            <img
+              src="./images/trash-icon.png"
+              alt="trash-icon"
+              class="cards-gallery__trash-image"
+            />
+          </button>
+          <div class="cards-gallery__group">
+            <p class="cards-gallery__group-title"></p>
+            <button class="cards-gallery__like-button"></button>
+          </div>
+        </div>
+      </template>
+
+      <!--full image-->
+      <div id="imageModal" class="popup cards-gallery__modal">
+        <img
+          src="#"
+          alt="gambar penuh"
+          class="cards-gallery__modal-content"
+          id="fullImage"
+        />
+        <p class="cards-gallery__modal-title"></p>
+        <button class="popup__close cards-gallery__modal-close">
+          <img src="./images/Close-Icon.png" alt="close-icon" />
+        </button>
+      </div>
 
       <footer class="footer">
         <p class="footer__create">© 2021 Around The U.S.</p>
       </footer>
     </main>
-    <script src="./script/main.js"></script>
+
+    <script src="./script/index.js"></script>
   </body>
 </html>
