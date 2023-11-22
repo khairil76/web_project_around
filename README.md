@@ -9,10 +9,12 @@ Project Feature
 - Responsive Design
 - CSS
 - Javascript
-
+  
+Fitur-Fitur
 - Form untuk menambahkan kartu baru
 <img width="361" alt="Screenshot 2023-11-22 063208" src="https://github.com/khairil76/web_project_around/assets/110145814/b1826680-9a69-44e5-928a-1f13ec602ce8">
   Didalam gambar menjelaskan penambahan formulir untuk penamabahan kartu baru ke galllery. dengan fitur ini kita dengan mudah menambahkan gambar sesuai keinginan, hanya dengan memberi judul dan mengisi link yang mengarahkan ke gambar yang akan di tampilkan di gallery.
+  
 
 - Fitur like-button
 <img width="368" alt="fitur like-button" src="https://github.com/khairil76/web_project_around/assets/110145814/aedb1c6b-3e23-49c5-ae97-2293c23d9ae6">
