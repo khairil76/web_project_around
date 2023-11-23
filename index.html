@@ -105,39 +105,41 @@
         </form>
       </section>
 
-      <div class="card-container"></div>
-      <template class="cards-gallery" id="card-template">
-        <div class="cards-gallery__item">
-          <img src="#" alt="gambar input url" class="cards-gallery__image" />
-          <button class="cards-gallery__trash">
-            <img
-              src="./images/trash-icon.png"
-              alt="trash-icon"
-              class="cards-gallery__trash-image"
-            />
-          </button>
-          <div class="cards-gallery__group">
-            <p class="cards-gallery__group-title"></p>
-            <button class="cards-gallery__like-button"></button>
+      <section class="cards">
+        <template class="cards-gallery" id="card-template">
+          <div class="cards-gallery__item">
+            <img src="#" alt="gambar input url" class="cards-gallery__image" />
+            <button class="cards-gallery__trash">
+              <img
+                src="./images/trash-icon.png"
+                alt="trash-icon"
+                class="cards-gallery__trash-image"
+              />
+            </button>
+            <div class="cards-gallery__group">
+              <p class="cards-gallery__group-title"></p>
+              <button class="cards-gallery__like-button"></button>
+            </div>
           </div>
-        </div>
-      </template>
+        </template>
 
-      <!--full image-->
-      <div id="imageModal" class="popup cards-gallery__modal">
-        <img
-          src="#"
-          alt="gambar penuh"
-          class="cards-gallery__modal-content"
-          id="fullImage"
-        />
-        <p class="cards-gallery__modal-title"></p>
-        <button class="popup__close cards-gallery__modal-close">
-          <img src="./images/Close-Icon.png" alt="close-icon" />
-        </button>
-      </div>
+        <!--full image-->
+        <div id="imageModal" class="popup cards-gallery__modal">
+          <img
+            src="#"
+            alt="gambar penuh"
+            class="cards-gallery__modal-content"
+            id="fullImage"
+          />
+          <p class="cards-gallery__modal-title"></p>
+          <button class="popup__close cards-gallery__modal-close">
+            <img src="./images/Close-Icon.png" alt="close-icon" />
+          </button>
+        </div>
+      </section>
 
       <footer class="footer">
+        33d
         <p class="footer__create">© 2021 Around The U.S.</p>
       </footer>
     </main>
