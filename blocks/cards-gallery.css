@@ -74,13 +74,13 @@
 
 /* full image */
 
-.cards-gallery__modal {
+.cards__modal {
   padding-top: 15rem;
   background-color: rgba(151, 126, 126, 0);
   transition: background-color 0.7s ease;
 }
 
-.cards-gallery__modal-open {
+.cards__modal-open {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -95,7 +95,7 @@
   opacity: 1;
 }
 
-.cards-gallery__modal-content {
+.cards__modal-content {
   position: fixed;
   width: 800px;
   height: 600px;
@@ -103,7 +103,7 @@
   opacity: 1;
 }
 
-.cards-gallery__modal-close {
+.cards__modal-close {
   color: #fff;
   position: relative;
   border: none;
@@ -113,7 +113,7 @@
   cursor: pointer;
 }
 
-.cards-gallery__modal-title {
+.cards__modal-title {
   color: #fff;
   font-size: 1.2rem;
   margin-top: 1rem;

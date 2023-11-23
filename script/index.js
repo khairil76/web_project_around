@@ -108,7 +108,7 @@ const initialCards = [
 const cardsGallery = document.querySelector(".cards-gallery");
 const modal = document.getElementById("imageModal");
 const modalContent = document.getElementById("fullImage");
-const closeModalButton = document.querySelector(".cards-gallery__modal-close");
+const closeModalButton = document.querySelector(".cards__modal-close");
 
 function addCard(titleValue, imageUrlValue) {
   const cardTemplate = document.querySelector("#card-template").content;
@@ -151,7 +151,7 @@ function openModal(imageUrl, title) {
   modalContent.src = imageUrl;
   modalContent.alt = title;
 
-  const existingTitle = document.querySelector(".cards-gallery__modal-title");
+  const existingTitle = document.querySelector(".cards__modal-title");
   if (existingTitle) {
     existingTitle.parentNode.removeChild(existingTitle);
   }
@@ -159,21 +159,21 @@ function openModal(imageUrl, title) {
   //full-image title
   const titleElement = document.createElement("p");
   titleElement.textContent = title;
-  titleElement.classList.add("cards-gallery__modal-title");
+  titleElement.classList.add("cards__modal-title");
   modalContent.parentNode.insertBefore(titleElement, modalContent.nextSibling);
 
-  modal.classList.add("cards-gallery__modal-open");
+  modal.classList.add("cards__modal-open");
 
   modal.addEventListener("click", closeModal);
 }
 
 function closeModal() {
-  const titleElement = document.querySelector(".cards-gallery__modal-title");
+  const titleElement = document.querySelector(".cards__modal-title");
 
   if (titleElement) {
     titleElement.parentNode.removeChild(titleElement);
   }
-  modal.classList.remove("cards-gallery__modal-open");
+  modal.classList.remove("cards__modal-open");
 }
 
 // Tampilkan semua gambar-gambar saat halaman dimuat
