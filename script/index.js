@@ -67,14 +67,6 @@ formAddImage.addEventListener("submit", function (evt) {
   closePopupAddImage();
 });
 
-function openPopupAddImage() {
-  formAddImage.classList.add("popup__open");
-}
-
-function closePopupAddImage() {
-  formAddImage.classList.remove("popup__open");
-}
-
 buttonAddImage.addEventListener("click", openPopupAddImage);
 closeButtonAddImage.addEventListener("click", closePopupAddImage);
 
