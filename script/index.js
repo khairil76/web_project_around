@@ -135,7 +135,7 @@ function addCard(titleValue, imageUrlValue) {
       cardsGallery.removeChild(cardElement);
     });
 
-  cardsGallery.appendChild(cardElement);
+  cardsGallery.insertBefore(cardElement, cardsGallery.firstChild);
 }
 
 // full-image opened
